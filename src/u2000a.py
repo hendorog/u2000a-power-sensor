@@ -6,8 +6,9 @@ from tkinter import ttk, messagebox
 class USBPowerSensor:
     def __init__(self, resource_name):
         self.rm = pyvisa.ResourceManager()
-        self.instrument.timeout = 5000  # timeout in milliseconds
+        self.rm.timeout = 1000
         self.instrument = self.rm.open_resource(resource_name)
+        self.instrument.timeout = 5000  # timeout in milliseconds
 
     def identify(self):
         return self.instrument.query("*IDN?").strip()
