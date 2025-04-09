@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: u2000a-exe
-          path: dist/windows.exe
+          path: dist/u2000a-exe
