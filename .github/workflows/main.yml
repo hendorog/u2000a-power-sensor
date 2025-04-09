@@ -20,9 +20,10 @@ jobs:
       - name: Install dependencies
         run: >
           python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-          pip install pyinstaller
-          pip install pyvisa  # Install dependencies; modify if using requirements.txt
+          #pip install pyinstaller
+          #pip install pyvisa  
           
       - name: Package Application with PyInstaller
         run: |
