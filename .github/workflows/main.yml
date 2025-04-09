@@ -27,7 +27,7 @@ jobs:
           
       - name: Package Application with PyInstaller
         run: |
-          pyinstaller src/u2000a.spec
+          pyinstaller u2000a.spec
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
